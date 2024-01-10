@@ -64,7 +64,19 @@ public with sharing class FlowControlLoopsCollections {
         // Initialize largestNum as null
         Integer largestNum = null;
 
-        return null; // Replace null with the variable you used to store the result
+        // return null if either number is null.
+        if(num1 == null || num2 == null) {
+            return null;
+        }
+
+        // if num1 > num 2 assign largestNum = num1
+        if(num1 > num2) {
+            largestNum = num1;
+        } else { // else num2 >= num1 assign largestNum = num2
+            largestNum = num2;
+        } 
+        
+        return largestNum; // Replace null with the variable you used to store the result
     }
 
 
