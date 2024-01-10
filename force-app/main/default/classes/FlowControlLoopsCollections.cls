@@ -205,15 +205,14 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String returnHelloWorld() {
         // Initialize the result String
+        String result = '';
 
         // Use a for loop to append 'Hello World!;' to the result string three times
-        /* 
-         for (){
-            
+         for (Integer i = 0; i < 3; i++){
+            result += 'Hello World!; ';    
          }
-        */
 
-        return null; // Replace null with the variable you used to store the result
+        return result;
     }
 
     /**
