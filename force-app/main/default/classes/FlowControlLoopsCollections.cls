@@ -70,13 +70,15 @@ public with sharing class FlowControlLoopsCollections {
         }
 
         // if num1 > num 2 assign largestNum = num1
+        // I could have done largestNum = Math.max(num1, num2) 
+        // but I wanted to show the if-else statement
         if(num1 > num2) {
             largestNum = num1;
         } else { // else num2 >= num1 assign largestNum = num2
             largestNum = num2;
         } 
 
-        return largestNum; // Replace null with the variable you used to store the result
+        return largestNum; 
     }
 
 
@@ -110,7 +112,24 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        // If the number is null, return null
+        if (a == null) {
+            return null;
+        }
+
+        String result;
+
+        // Use the Math.mod() method to get the remainder of a divided by 2
+        Integer remainder = Math.mod(a, 2);
+
+        // If the remainder is 0, the number is even, otherwise it is odd
+        if (remainder == 0) {
+            result = 'Even';
+        } else {
+            result = 'Odd';
+        }
+        
+        return result;
     }
 
     /**
@@ -120,7 +139,17 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        String result;
+
+        if (a == null) {
+            result = 'Null';
+        } else if (a == '') {
+            result = 'Empty';
+        } else {
+            result = 'Contains Text';
+        }
+
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
